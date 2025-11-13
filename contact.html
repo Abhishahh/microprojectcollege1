@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitLife - Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="container">
+    <div class="logo">💪 FitLife</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="workouts.html">Workouts</a></li>
+      <li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="tips.html">Wellness Tips</a></li>
+      <li><a href="bmi.html">BMI Calculator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Contact FitLife</h1>
+    <p>Whether you have questions, feedback, suggestions, or need guidance, we’re here to support your fitness and wellness journey. Connect with us anytime.</p>
+  </div>
+</section>
+
+<main>
+
+<!-- CONTACT FORM SECTION -->
+<section class="content-section">
+  <div class="container">
+
+    <h2>Get in Touch With Us</h2>
+    <p>Use the form below to reach out for help, feedback, collaboration ideas, bug reports, or support. As a student-focused platform, we value clear communication and aim to respond within 48 hours. If you are using this for a hackathon or academic presentation, mention it in your message so we can provide additional technical support and documentation.</p>
+
+    <div class="contact-form">
+      <form onsubmit="submitForm(event)">
+        <div class="form-group">
+          <label>Your Name:</label>
+          <input type="text" id="name" required placeholder="Full Name">
+        </div>
+
+        <div class="form-group">
+          <label>Email Address:</label>
+          <input type="email" id="email" required placeholder="example@gmail.com">
+        </div>
+
+        <div class="form-group">
+          <label>Subject:</label>
+          <input type="text" id="subject" required placeholder="Reason for contacting us">
+        </div>
+
+        <div class="form-group">
+          <label>Your Message:</label>
+          <textarea id="message" required placeholder="Write your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+
+    <hr style="margin: 35px 0;">
+
+    <!-- CONTACT CHANNELS -->
+    <h2>Other Ways to Reach Us</h2>
+    <p>Prefer email, phone, social media, or community forums? Below are multiple ways to get assistance depending on your needs.</p>
+
+    <div class="workout-grid">
+      <div class="workout-card">
+        <h4>📧 Email Support</h4>
+        <p><strong>General Queries:</strong> info.fitlife@support.com</p>
+        <p><strong>Technical Issues:</strong> tech.fitlife@support.com</p>
+        <p><strong>Feedback:</strong> feedback.fitlife@support.com</p>
+        <p class="small">We reply within 24–48 hours on weekdays.</p>
+      </div>
+
+      <div class="workout-card">
+        <h4>📱 Phone / WhatsApp</h4>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>WhatsApp:</strong> +91 90807 12345</p>
+        <p>Office Hours: 10 AM – 6 PM (Mon–Fri)</p>
+      </div>
+
+      <div class="workout-card">
+        <h4>💬 Community Forum</h4>
+        <p>Join the FitLife community to ask questions, share progress, or get peer support.</p>
+        <ul>
+          <li>Workout advice</li>
+          <li>Nutrition help</li>
+          <li>Mental wellness discussions</li>
+        </ul>
+        <p><i>Coming soon!</i></p>
+      </div>
+
+      <div class="workout-card">
+        <h4>📍 Physical Address</h4>
+        <p>FitLife Student Wellness Center</p>
+        <p>123 Fitness Avenue</p>
+        <p>Mumbai, India 400001</p>
+        <p class="small">(For academic/hackathon showcase only – this is a fictional address.)</p>
+      </div>
+    </div>
+
+    <hr style="margin: 35px 0;">
+
+    <!-- SUPPORT SECTIONS -->
+    <h2>Support Categories — Choose What You Need</h2>
+    <p>To help you better explain your issue, here are common categories students usually contact us for:</p>
+
+    <h3>1. Technical Issues</h3>
+    <ul>
+      <li>Website loading problems</li>
+      <li>Broken pages or features</li>
+      <li>BMI calculator not responding</li>
+      <li>Form submission not working</li>
+      <li>CSS/JS issues in your project</li>
+    </ul>
+
+    <h3>2. Fitness & Workout Questions</h3>
+    <ul>
+      <li>Help with selecting a workout plan</li>
+      <li>Beginner troubleshooting</li>
+      <li>Form, technique or recovery questions</li>
+    </ul>
+
+    <h3>3. Nutrition & Diet Queries</h3>
+    <ul>
+      <li>Protein intake questions</li>
+      <li>Vegetarian/eggetarian diets</li>
+      <li>Meal planning for students</li>
+    </ul>
+
+    <h3>4. Wellness & Mental Health Support</h3>
+    <ul>
+      <li>Stress management</li>
+      <li>Sleep improvement tips</li>
+      <li>Mindfulness resources</li>
+    </ul>
+
+    <h3>5. Project, Hackathon & Academic Support</h3>
+    <p>This is extremely useful for your project:</p>
+    <ul>
+      <li>Website explanation for viva</li>
+      <li>Documentation help</li>
+      <li>Poster/presentation guidance</li>
+      <li>Feature explanation</li>
+      <li>Architecture overview</li>
+    </ul>
+
+    <hr style="margin: 35px 0;">
+
+    <!-- FAQ SECTION -->
+    <h2>Frequently Asked Questions (FAQs)</h2>
+    <p>These are common questions students ask us, including project-related ones.</p>
+
+    <details>
+      <summary>Why isn’t my BMI calculator working?</summary>
+      <p>Double-check your JavaScript file linking. Ensure script.js is correctly referenced in the HTML file. Also check if your input IDs (“weight” and “height”) match your JS code.</p>
+    </details>
+
+    <details>
+      <summary>Can you help me with my hackathon presentation?</summary>
+      <p>Yes! We can guide you with the structure, slides, explanation of your features, and demo flow.</p>
+    </details>
+
+    <details>
+      <summary>How soon will I receive a reply?</summary>
+      <p>Typically within 1–2 business days. During exam seasons, response time may temporarily increase due to higher volume.</p>
+    </details>
+
+    <details>
+      <summary>I am a beginner. Can I ask for workout tips?</summary>
+      <p>Yes. We recommend reading the Workouts and Wellness pages for full guidance, and then contacting us for personalised help.</p>
+    </details>
+
+    <details>
+      <summary>Is FitLife free?</summary>
+      <p>Yes, the platform is designed as a free resource for students.</p>
+    </details>
+
+    <details>
+      <summary>Can I submit ideas or articles?</summary>
+      <p>Absolutely! Send us a message with “Article Suggestion” as the subject.</p>
+    </details>
+
+    <hr style="margin: 35px 0;">
+
+    <!-- TEAM SECTION -->
+    <h2>Meet the FitLife Team</h2>
+    <p>FitLife is run by a small but passionate student-focused team. Below is a simple introduction (fictional for project purposes):</p>
+
+    <div class="workout-grid">
+      <div class="workout-card">
+        <h4>🏋️ Rohan Patel — Head of Fitness</h4>
+        <p>Certified strength coach focusing on beginner routines, injury-free training, and creating simple workout plans for students.</p>
+      </div>
+
+      <div class="workout-card">
+        <h4>🥗 Ananya Sharma — Nutrition Consultant</h4>
+        <p>Nutrition advisor specialising in student diets, vegetarian protein sources, and affordable meal planning.</p>
+      </div>
+
+      <div class="workout-card">
+        <h4>🧘 Priya Nair — Wellness Coach</h4>
+        <p>Guides meditation, stress management and habit-building practices tailored for student mental health.</p>
+      </div>
+
+      <div class="workout-card">
+        <h4>💻 Arjun Verma — Developer</h4>
+        <p>Front-end developer who built the FitLife interface with clean HTML, CSS and JavaScript — ideal for beginners.</p>
+      </div>
+    </div>
+
+    <hr style="margin: 35px 0;">
+
+    <!-- TROUBLESHOOTING AREA -->
+    <h2>Contact Troubleshooting Guide</h2>
+    <p>If the contact form doesn’t seem to work, check the following:</p>
+
+    <ul>
+      <li>Ensure your JavaScript file is correctly linked.</li>
+      <li>Confirm IDs in the form match those in script.js.</li>
+      <li>Check your HTML form has <strong>onsubmit="submitForm(event)"</strong>.</li>
+      <li>Make sure fields are not empty.</li>
+      <li>Test using console logs to verify submission.</li>
+    </ul>
+
+    <p>If still not working, send us a direct email.</p>
+
+    <hr style="margin: 35px 0;">
+
+    <!-- USER GUIDE -->
+    <h2>How to Get the Fastest Response</h2>
+    <p>Follow this simple structure when writing your message:</p>
+    <ol>
+      <li><strong>State your issue clearly.</strong> Example: “My BMI calculator gives NaN.”</li>
+      <li><strong>Add screenshots or code snippets.</strong></li>
+      <li><strong>Tell us what you already tried.</strong></li>
+      <li><strong>Mention deadlines</strong> (e.g., hackathon, internal submission).</li>
+    </ol>
+
+    <p>Using this format allows us to reply quickly with the exact fix.</p>
+
+    <hr style="margin: 35px 0;">
+
+    <!-- FEEDBACK SYSTEM -->
+    <h2>Feedback & Suggestions</h2>
+    <p>Your feedback helps improve FitLife. Tell us what pages you like, what needs improvement, or what new features you want.</p>
+    <div class="workout-grid">
+      <div class="workout-card">
+        <h4>New Feature Ideas</h4>
+        <ul>
+          <li>Workout progress tracker</li>
+          <li>Daily water intake reminder</li>
+          <li>Week-by-week meal plan generator</li>
+          <li>Community board for students</li>
+        </ul>
+      </div>
+
+      <div class="workout-card">
+        <h4>Common Feedback From Students</h4>
+        <ul>
+          <li>“The pages are easy to understand.”</li>
+          <li>“BMI calculation works smoothly.”</li>
+          <li>“Navigation bar looks modern.”</li>
+          <li>“Helped us complete our hackathon project quickly.”</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr style="margin: 35px 0;">
+
+    <!-- PRIVACY SECTION -->
+    <h2>Privacy & Data Handling</h2>
+    <p>Your privacy matters. FitLife follows simple but strict guidelines:</p>
+    <ul>
+      <li>We do not store passwords or sensitive information.</li>
+      <li>We do not share your details with third parties.</li>
+      <li>Messages are used only to provide support or improve the platform.</li>
+    </ul>
+
+    <p class="small">This section is required in many academic projects to show user privacy awareness.</p>
+
+    <hr style="margin: 35px 0;">
+
+    <!-- CLOSING -->
+    <h2>Final Note</h2>
+    <p>Thank you for visiting the FitLife Contact page. We love helping students build healthier lifestyles through simple, science-based guidance. Whether you need tech support or wellness advice, don’t hesitate to reach out.</p>
+
+    <p class="small">If you want a downloadable Contact PDF or Poster for your project, say “Create Contact PDF”.</p>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 FitLife — Contact & Support. Designed for student fitness and wellness projects.</p>
+  </div>
+</footer>
+
+</body>
+</html>

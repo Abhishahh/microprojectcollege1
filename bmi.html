@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitLife - BMI & Body Composition</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="logo">💪 FitLife</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="workouts.html">Workouts</a></li>
+      <li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="tips.html">Wellness Tips</a></li>
+      <li><a href="bmi.html">BMI Calculator</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>BMI & Body Composition — Understand the Numbers</h1>
+    <p>Use BMI as a quick screening tool, understand its limitations, and learn other practical measures (waist circumference, waist-to-height ratio, performance markers) that better reflect health and fitness.</p>
+  </div>
+</section>
+
+<main>
+  <section class="content-section">
+    <div class="container">
+
+      <h2>Calculate Your BMI (Body Mass Index)</h2>
+      <p>Enter your weight and height below and press <strong>Calculate</strong>. BMI is a simple formula: weight (kg) ÷ height (m)². The built-in calculator returns your BMI and a simple category based on standard ranges.</p>
+
+      <div class="calculator">
+        <div class="form-group">
+          <label>Weight (kg):</label>
+          <input type="number" id="weight" placeholder="e.g. 66" />
+        </div>
+
+        <div class="form-group">
+          <label>Height (cm):</label>
+          <input type="number" id="height" placeholder="e.g. 170" />
+        </div>
+
+        <div class="center" style="margin-top:10px;">
+          <button class="submit-btn" onclick="calculateBMI()">Calculate BMI</button>
+        </div>
+
+        <div id="bmiResult" class="result" style="margin-top:12px;"></div>
+      </div>
+
+      <hr style="margin:28px 0;">
+
+      <h2>What BMI Means — Quick Summary</h2>
+      <table class="nutrition-table" style="margin-top:12px;">
+        <thead>
+          <tr><th>BMI Range</th><th>Category</th><th>Quick Health Note</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Below 18.5</td><td>Underweight</td><td>Possible undernutrition; evaluate energy intake.</td></tr>
+          <tr><td>18.5 – 24.9</td><td>Normal weight</td><td>Generally healthy range for many adults.</td></tr>
+          <tr><td>25.0 – 29.9</td><td>Overweight</td><td>Increased risk for metabolic issues; consider lifestyle changes.</td></tr>
+          <tr><td>30.0 and above</td><td>Obese</td><td>Higher risk for chronic diseases; professional guidance recommended.</td></tr>
+        </tbody>
+      </table>
+
+      <p class="small">Important: BMI is a screening tool, not a diagnostic test. It does not distinguish between muscle and fat. Use BMI alongside other measures and how you feel.</p>
+
+      <hr style="margin:28px 0;">
+
+      <h2>How BMI is Calculated — The Formula</h2>
+      <p>Formula: <strong>BMI = weight (kg) / (height (m))²</strong>. Example: weight = 66 kg, height = 170 cm (1.70 m). BMI = 66 ÷ (1.7 × 1.7) ≈ 22.8.</p>
+
+      <h3>Manual Example</h3>
+      <pre style="background:#f8f9fa; padding:12px; border-radius:8px;">
+Weight = 66 kg
+Height = 170 cm → 1.70 m
+BMI = 66 / (1.70 * 1.70) = 66 / 2.89 ≈ 22.8
+      </pre>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Limitations of BMI — Why it Isn’t Perfect</h2>
+      <p>BMI is easy to calculate and useful at the population level, but it has limitations for individuals:</p>
+      <ul>
+        <li>It does not distinguish between muscle mass and fat mass. Very muscular people can have high BMI but low body fat.</li>
+        <li>It doesn’t measure fat distribution — abdominal fat is more risky than peripheral fat.</li>
+        <li>It may misclassify older adults with low muscle mass.</li>
+        <li>Different ethnic groups may have different risk profiles at the same BMI — so interpret with context.</li>
+      </ul>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Better Together — Waist Circumference & Waist-to-Height Ratio (WHtR)</h2>
+      <p>These measures capture abdominal fat and are better predictors of cardiometabolic risk than BMI alone.</p>
+
+      <h3>How to Measure Waist Circumference</h3>
+      <ol>
+        <li>Find the top of your hip bone and the bottom of your rib cage.</li>
+        <li>Measure midway between these points, usually around the belly button level.</li>
+        <li>Stand relaxed, breathe out, and measure without tightening the tape.</li>
+      </ol>
+
+      <h3>Risk guide (Waist circumference)</h3>
+      <ul>
+        <li>Men: > 94 cm (increased risk), > 102 cm (high risk)</li>
+        <li>Women: > 80 cm (increased risk), > 88 cm (high risk)</li>
+      </ul>
+
+      <h3>Waist-to-Height Ratio (WHtR)</h3>
+      <p>WHtR = waist (cm) / height (cm). A simple rule: keep your waist less than half your height (WHtR < 0.5) for lower cardiometabolic risk.</p>
+
+      <h4>Example</h4>
+      <pre style="background:#f8f9fa; padding:12px; border-radius:8px;">
+Height = 170 cm, Waist = 78 cm
+WHtR = 78 / 170 = 0.459 → below 0.5 (lower risk)
+      </pre>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Body Composition — Muscle, Fat, Bone & Water</h2>
+      <p>Body composition tells you what your body is made of — fat mass vs lean mass (muscle, bones, organs). Two people with the same BMI can have very different compositions.</p>
+
+      <h3>Common ways to estimate body composition</h3>
+      <ul>
+        <li>Skinfold calipers — approximate body fat (requires technique)</li>
+        <li>Bioelectrical impedance scales — convenient but variable</li>
+        <li>DEXA scans — precise but expensive and usually clinical</li>
+        <li>Measurements & performance — practical proxies (waist, strength tests)</li>
+      </ul>
+
+      <h3>Why composition matters</h3>
+      <p>Muscle increases metabolic rate and functional strength. Focusing on resistance training and adequate protein is important whether your goal is to lose fat, gain muscle, or improve health.</p>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Action Plans Based on BMI & Context</h2>
+      <p>Below are practical, safe action plans you can adapt depending on your BMI and personal goals. Always consider how you feel and consult a professional for major changes.</p>
+
+      <h3>Underweight (BMI &lt; 18.5)</h3>
+      <ul>
+        <li>Goal: Gradual, healthy weight gain focusing on muscle and strength.</li>
+        <li>Nutrition: Add 300–500 kcal/day above maintenance; increase protein (1.4–1.8 g/kg), use nutrient-dense foods and smoothies (milk, oats, nut butter, banana).</li>
+        <li>Training: Emphasise resistance training 2–4 times/week; avoid excessive cardio.</li>
+        <li>Recovery: Prioritise sleep and regular meals.</li>
+      </ul>
+
+      <h3>Normal (BMI 18.5 – 24.9)</h3>
+      <ul>
+        <li>Goal: Maintain health or improve body composition (gain muscle or reduce fat) depending on preference.</li>
+        <li>Nutrition: Balanced diet, meet protein targets (1.2–1.6 g/kg if active).</li>
+        <li>Training: Mix strength + cardio; progressive overload for muscle or moderate calorie deficit for fat loss.</li>
+      </ul>
+
+      <h3>Overweight / Obese (BMI ≥ 25)</h3>
+      <ul>
+        <li>Goal: Reduce health risk through sustainable lifestyle changes.</li>
+        <li>Nutrition: Small calorie deficit (−300 to −500 kcal/day), increase protein to support muscle, prioritise whole foods.</li>
+        <li>Exercise: Combine resistance training + moderate cardio; start with manageable routines to build adherence.</li>
+        <li>Medical: Consider professional assessment for metabolic or medical issues if BMI is very high or if comorbidities exist.</li>
+      </ul>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Special Considerations — Athletes & Muscular Individuals</h2>
+      <p>If you are very active or have significant muscle mass, BMI may overestimate fatness. Evaluate additional measures:</p>
+      <ul>
+        <li>Waist circumference and WHtR (better for health risk)</li>
+        <li>Strength/performance metrics (pull-ups, squats, timed runs)</li>
+        <li>Body composition assessments if available</li>
+      </ul>
+
+      <p>For athletes, track performance goals (strength, speed, endurance) alongside composition changes rather than BMI alone.</p>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Measurement Protocols — How to Get Consistent Readings</h2>
+      <p>To track BMI or weight reliably, follow a consistent protocol:</p>
+      <ul>
+        <li>Weigh yourself in the morning after using the bathroom and before eating/drinking.</li>
+        <li>Use the same scale and place it on a flat surface.</li>
+        <li>Measure waist at a consistent point (midway between rib cage and top of hips) and breathe out normally while measuring.</li>
+        <li>Track weekly averages rather than daily fluctuations.</li>
+      </ul>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Combining Tools for Better Decisions</h2>
+      <p>Use a combination of:</p>
+      <ul>
+        <li>BMI for a quick screen</li>
+        <li>Waist circumference or WHtR for risk assessment</li>
+        <li>Strength and performance markers for functional goals</li>
+        <li>Sleeping, mood, and energy tracking for overall wellbeing</li>
+      </ul>
+
+      <h3>Sample Weekly Tracking Template</h3>
+      <pre style="background:#f8f9fa; padding:12px; border-radius:8px;">
+Week | Weight (kg) | Waist (cm) | WHtR | Days Trained | Avg Sleep (hrs) | Notes
+1    | 66.0        | 78         | 0.459| 3            | 7.1             | Good energy
+2    | 66.2        | 77.5       | 0.456| 4            | 7.3             | Slight progress
+      </pre>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+
+      <details>
+        <summary>Is BMI accurate for me?</summary>
+        <p>BMI is a useful starting point. If you are very muscular, elderly, or of a certain ethnicity with different risk profiles, use additional measures like waist circumference and performance tests.</p>
+      </details>
+
+      <details>
+        <summary>How fast should I lose or gain weight?</summary>
+        <p>Healthy weight loss is ~0.5–1% of bodyweight per week. For a 66 kg person, that’s ~0.3–0.7 kg/week. Healthy gain for muscle is typically 0.25–0.5 kg/week for beginners. Rapid changes often reflect fluid, not sustainable tissue changes.</p>
+      </details>
+
+      <details>
+        <summary>What if my BMI is “overweight” but I feel fit?</summary>
+        <p>High BMI due to muscle is common. Use waist circumference, fitness tests, and body composition if available. Focus on performance and health markers rather than the number alone.</p>
+      </details>
+
+      <details>
+        <summary>Should I use BMI to set goals?</summary>
+        <p>Use BMI as one of several markers. Better goals are performance-based (increase squat weight, run faster), habit-based (train 3x/week), or composition-based (reduce waist by 2–3 cm over 4 weeks).</p>
+      </details>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Practical Next Steps After Checking Your BMI</h2>
+      <ol>
+        <li>Note your BMI, waist, and WHtR in a notebook.</li>
+        <li>Decide one achievable action for the next 2 weeks (eat +1 protein portion/day, add one 20-minute walk, or complete 3 short strength sessions).</li>
+        <li>Re-test weekly and focus on trends rather than daily changes.</li>
+      </ol>
+
+      <hr style="margin:28px 0;">
+
+      <h2>When to Seek Professional Help</h2>
+      <p>If you have BMI in a high range combined with waist circumference over thresholds, or if you have medical conditions (diabetes, high blood pressure), consult a healthcare provider for personalised advice. If you have eating concerns, consult a qualified mental-health or nutritional professional.</p>
+
+      <hr style="margin:28px 0;">
+
+      <h2>Closing Thoughts</h2>
+      <p>BMI is a practical, fast screening tool but never the full story. Combine BMI with waist measures, performance tests, and how you feel. Use the action plans on this page to set sustainable, measurable steps. Fitness and health are built over months and years — this is a marathon, not a sprint.</p>
+
+      <p class="small">If you want, I can add a downloadable tracking spreadsheet (CSV) that matches the sample template above — say "give CSV" and I’ll produce it so you can import into Excel/Google Sheets.</p>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 FitLife — BMI & Body Composition. For educational use only. Not medical advice.</p>
+  </div>
+</footer>
+
+</body>
+</html>
